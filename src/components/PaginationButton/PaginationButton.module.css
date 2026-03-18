@@ -1,0 +1,8 @@
+.pageButton {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
