@@ -35,15 +35,21 @@ export default function MoviePage () {
 
         if(query) fetchMovies(getMovieBySearch);
         else fetchMovies(getTopRatedMovies);
-    }, [currentPage, query]);
+    }, [page, query]);
 
     useEffect(() => {
-        if(currentPage > lastPage)
+        if(page > lastPage)
         {
             if (query) navigate(`/movies/search/${query}/${lastPage}`);
             else navigate(`/movies/topRated/${lastPage}`);
         };
-    }, [currentPage, lastPage]);
+
+        if(page < 1)
+        {
+            if (query) navigate(`/movies/search/${query}/1`, {replace: true});
+            else navigate(`/movies/topRated/1`, {replace: true});
+        }
+    }, [page, lastPage]);
 
     async function getTopRatedMovies() {
     const url = `https://api.themoviedb.org/3/movie/top_rated?page=${currentPage}`;
@@ -73,6 +79,7 @@ export default function MoviePage () {
 
     const res = await fetch(url, options);
     const data = await res.json();
+    console.log(data.results);
     changeLastPage(data.total_pages);
     return data.results;
   }
