@@ -1,12 +1,12 @@
 import styles from "./SearchBar.module.css"
 
-export default function SearchBar(props) {
+export default function SearchBar({handleSearch}) {
 
     //Grab the value from the search input field and pass it into the callback function. While preventing page reload and reset field
     const handleSubmit = (e) => {
         e.preventDefault();
         const searchTerm = e.target.elements.searchBar.value;
-        props.handleSearch(searchTerm);
+        handleSearch(searchTerm);
         e.target.reset();
     }
 
