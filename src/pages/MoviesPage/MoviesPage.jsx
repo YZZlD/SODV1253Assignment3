@@ -78,6 +78,7 @@ export default function MoviePage () {
                 {currentPage != 1 && (<PaginationButton message="Previous 20" handlePageChange={() => changeCurrentPage(-1)}/>)}
                 {(currentPage != lastPage) && <PaginationButton message="Next 20" handlePageChange={() => changeCurrentPage(1)}/>}
             </div>
+
       </>
     )
 }

@@ -111,3 +111,83 @@
     transform: scale(1.1);
     filter: brightness(0.7);
 }
+
+@media (max-width: 768px) {
+  .backdrop {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .overlay {
+    width: 95%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    max-height: 95svh;
+    overflow-y: auto;
+    border-radius: 10px;
+  }
+
+  .poster {
+    width: 180px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .meta {
+    font-size: 12px;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .overview {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .genre {
+    font-size: 10px;
+    padding: 4px 8px;
+    margin: 4px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  .exitButton {
+    top: 10px;
+    left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+}

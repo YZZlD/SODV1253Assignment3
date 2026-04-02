@@ -32,8 +32,8 @@ export default function MovieDetails({ movie, previous }) {
                     <p className={styles.overview}>{movie.overview}</p>
 
                     <div className={styles.meta}>
-                        <span>Budget: {movie.budget == 0 ? "N/A" : `$${movie.budget.toLocaleString()}`}</span>
-                        <span>Revenue: {movie.revenue == 0 ? "N/A" :`$${movie.revenue.toLocaleString()}`}</span>
+                        <span>Budget: {!movie.budget ? "N/A" : `$${movie.budget.toLocaleString()}`}</span>
+                        <span>Revenue: {!movie.revenue ? "N/A" :`$${movie.revenue.toLocaleString()}`}</span>
                     </div>
 
                     {movie.homepage && (

@@ -7,6 +7,8 @@
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     border-bottom: 2px solid #045ac2;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .logo {
@@ -59,4 +61,27 @@
 
 .dropdown:hover .dropdownContent {
     display: block;
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .dropbtn {
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    width: auto;
+  }
+
+  .dropdownContent {
+    min-width: 90px;
+  }
 }

@@ -34,3 +34,21 @@
 .searchButton:hover{
     background-color: #024392;
 }
+
+@media (max-width: 768px) {
+  .searchBar {
+    width: 95%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+  .searchInput {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .searchButton {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

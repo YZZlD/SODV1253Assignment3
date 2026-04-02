@@ -6,6 +6,7 @@ export default function SearchBar({handleSearch}) {
     const handleSubmit = (e) => {
         e.preventDefault();
         const searchTerm = e.target.elements.searchBar.value;
+        if(!searchTerm.trim()) return;
         handleSearch(searchTerm);
         e.target.reset();
     }

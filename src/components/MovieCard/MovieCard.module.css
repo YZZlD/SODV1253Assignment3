@@ -42,3 +42,26 @@
         color: yellow;
     }
 }
+
+/* Solve clipping by adjusting card to a vertical orientation */
+@media (max-width: 768px) {
+  .movieCardHorizontal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movieInfo {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .titleOverview .overview {
+    max-height: none;
+  }
+
+  .extraInfo {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
